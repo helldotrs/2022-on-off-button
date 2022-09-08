@@ -15,6 +15,8 @@ if (!$_POST['pass']){
 
 //IMPORT CONNECT SQL HERE
 
+require('sql/login-info.inc.php');
+require('sql/connect.inc.php');
 require('inc/sanitize.inc.php');
 require('inc/password.inc.php');
 
