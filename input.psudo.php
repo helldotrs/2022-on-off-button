@@ -15,10 +15,7 @@ if (!$_POST['pass']){
 
 //IMPORT CONNECT SQL HERE
 
-function sanitize(x){
-  x = real_escape_string(x);
-  return x;
-};
+require('inc/sanitize.inc.php');
 
 $php_pass   = "password";
 $post_pass  = sanitize($_POST['pass']);
