@@ -23,7 +23,21 @@ require('inc/password.inc.php');
 $post_pass  = sanitize($_POST['pass']);
 
 if($post_pass == $php_pass){
-  setSqlValue(TRUE);
+
+  $sql = "INSERT INTO hellmak-on-ff (only_value)
+  VALUES (TRUE)";
+
+  if ($conn->query($sql) === TRUE) {
+    print ":)";
+  } else {
+    print "Error: " . $sql . " " . $conn->error;
+    print "<br >Error: 23941";
+  }
+
+  $conn->close();
+}else{
+  $conn->close();
+  die();
 }
 
 
