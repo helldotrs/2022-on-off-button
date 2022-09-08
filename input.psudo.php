@@ -16,8 +16,8 @@ if (!$_POST['pass']){
 //IMPORT CONNECT SQL HERE
 
 require('inc/sanitize.inc.php');
+require('inc/password.inc.php');
 
-$php_pass   = "password";
 $post_pass  = sanitize($_POST['pass']);
 
 if($post_pass == $php_pass){
