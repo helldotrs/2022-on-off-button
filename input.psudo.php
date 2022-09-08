@@ -24,7 +24,7 @@ $post_pass  = sanitize($_POST['pass']);
 
 if($post_pass == $php_pass){
 
-  $sql = "INSERT INTO hellmak-on-ff (only_value)
+  $sql = "INSERT INTO hellmak-on-off (only_value)
   VALUES (TRUE)";
 
   if ($conn->query($sql) === TRUE) {
